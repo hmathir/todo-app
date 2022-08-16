@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Monitor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="mt-8">
+        <h1 class="text-5xl font-semibold text-center mb-5">Task Monitor</h1>
+    </header>
+    <!-- Input Section. -->
+    <main class="">
+        <section class="bg-violet-200 py-10 w-9/12 mx-auto">
+            <div class="text-center">
+                <input id="task-input" class="py-2 rounded-lg px-2" type="text" placeholder="Add New Task...">
+                <button id="add-task-btn"
+                    class="px-3 py-2 bg-lime-200 hover:bg-pink-500 hover:text-white rounded-lg">Add Task</button>
+            </div>
+        </section>
+
+        <section class="bg-violet-200 py-10 w-9/12 mx-auto">
+            <div class="grid grid-cols-2 gap-4 mx-6 ">
+                <div id="incomplete-task-div" class="incomplete-task-div bg-lime-300 rounded-lg p-5">
+                    <h1 class="text-center text-2xl font-semibold mb-2">Incomplete Task</h1>
+                    <hr class="border-2 border-white rounded-lg mb-2">
+                    <!-- <div class="flex justify-between items-center">
+                        <p>0</p>
+                        <h1 class="font-bold">Task 01</h1>
+                        <div>
+                            <button class="bg-pink-300 px-3 py-1 rounded-lg">Complete</button>
+                            <button class="bg-red-600 px-3 py-1 rounded-lg text-white">Delete</button>
+                        </div>
+                    </div> -->
+                </div>
+                <div id="complete-task-div" class="bg-pink-300 rounded-lg p-5">
+                    <h1 class="text-center text-2xl font-semibold mb-2">Complete Task</h1>
+                    <hr class="border-2 border-white rounded-lg mb-2">
+                    <!-- <div class="flex justify-between items-center">
+                        <p>0</p>
+                        <h1 class="font-bold">Task 01</h1>
+                        <div>
+                            <button class="bg-lime-300 px-3 py-1 rounded-lg ">Incomplete</button>
+                            <button class="bg-red-600 px-3 py-1 rounded-lg text-white">Delete</button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <script src="js/add_task.js"></script>
+    <script src="js/complete_task.js"></script>
+</body>
+
+</html>
