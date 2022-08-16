@@ -17,30 +17,34 @@ document.getElementById('add-task-btn').addEventListener('click',function(){
     <h1 id="incomplete-task-value" class="font-bold">${newTaskInputValue}</h1>
     <div>
         <button  class="complete-task-btn bg-pink-300 px-3 py-1 rounded-lg">Complete</button>
-        <button class="bg-red-600 px-3 py-1 rounded-lg text-white">Delete</button>
+        <button class="dlt-task-btn bg-red-600 px-3 py-1 rounded-lg text-white">Delete</button>
     </div>
     `
     incompleteTaskParentDiv.appendChild(newIncompleteTask);
-
+   
+    
 
     const completeBtn = document.getElementsByClassName('complete-task-btn');
-    for(btn of completeBtn){
+    for(let i = 0; i < completeBtn.length; i++){
+        const btn = completeBtn[i];
         btn.addEventListener('click', function(event){
-            event.target.parentNode.parentNode.style.display = 'none';
+            event.stopImmediatePropagation();
+           event.target.parentNode.parentNode.style.display = 'none';
             const completeTaskParentDiv = document.getElementById('complete-task-div');
             const completeTask = document.createElement('div');
             completeTask.classList.add("flex" ,"justify-between", "items-center", "mt-3");
             completeTask.innerHTML = `
-            <p>${count}</p>
+            <p>${i+=1}</p>
             <h1 id="incomplete-task-value" class="font-bold">${newTaskInputValue}</h1>
             <div>
-            <button class="bg-lime-300 px-3 py-1 rounded-lg ">Incomplete</button>
-            <button class="bg-red-600 px-3 py-1 rounded-lg text-white">Delete</
+            <button class="incomplete-task-btn bg-lime-300 px-3 py-1 rounded-lg ">Incomplete</button>
+            <button class="dlt-task-btn-two bg-red-600 px-3 py-1 rounded-lg text-white">Delete</button>
             </div>
             `;
             completeTaskParentDiv.appendChild(completeTask);
         })
     }
+
 
 
 })
