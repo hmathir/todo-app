@@ -42,9 +42,29 @@ document.getElementById('add-task-btn').addEventListener('click',function(){
             </div>
             `;
             completeTaskParentDiv.appendChild(completeTask);
+
+
+            //HAVE TO ADD INCOMPLETE BTN FUNCTION HERE
+            ///////
+            ///////
+            ///////
+            ///HAVE TO ADD INCOMPLETE BTN FUNCTION HERE
+            const dltbtnTwo = document.getElementsByClassName('dlt-task-btn-two');
+            for(const btn of dltbtnTwo){
+                btn.addEventListener('click', function(event){
+                    event.target.parentNode.parentNode.style.display = 'none';
+                })
+            }
+        
         })
     }
 
+    const dltbtnOne = document.getElementsByClassName('dlt-task-btn');
+    for(const btn of dltbtnOne){
+        btn.addEventListener('click', function(event){
+            event.target.parentNode.parentNode.style.display = 'none';
+        })
+    }
 
 
 })
