@@ -37,18 +37,11 @@ document.getElementById('add-task-btn').addEventListener('click',function(){
             <p>${i+=1}</p>
             <h1 id="incomplete-task-value" class="font-bold">${newTaskInputValue}</h1>
             <div>
-            <button class="incomplete-task-btn bg-lime-300 px-3 py-1 rounded-lg ">Incomplete</button>
             <button class="dlt-task-btn-two bg-red-600 px-3 py-1 rounded-lg text-white">Delete</button>
             </div>
             `;
             completeTaskParentDiv.appendChild(completeTask);
 
-
-            //HAVE TO ADD INCOMPLETE BTN FUNCTION HERE
-            ///////
-            ///////
-            ///////
-            ///HAVE TO ADD INCOMPLETE BTN FUNCTION HERE
             const dltbtnTwo = document.getElementsByClassName('dlt-task-btn-two');
             for(const btn of dltbtnTwo){
                 btn.addEventListener('click', function(event){
